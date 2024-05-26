@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="pocketacademy.Views.Registration">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical"
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="CenterAndExpand"
+                     Padding="16">
+
+            <Entry x:Name="editTextUsername"
+                   Placeholder="Username"
+                   Margin="0,16,0,0"
+                   HorizontalOptions="FillAndExpand"/>
+
+            <Entry x:Name="editTextPassword"
+                   Placeholder="Password"
+                   IsPassword="True"
+                   Margin="0,16,0,0"
+                   HorizontalOptions="FillAndExpand"/>
+
+            <Entry x:Name="editTextEmail"
+                   Placeholder="E-Mail"
+                   Keyboard="Email"
+                   Margin="0,16,0,0"
+                   HorizontalOptions="FillAndExpand"/>
+
+            <Button x:Name="buttonRegister"
+                    Text="Register"
+                    HorizontalOptions="Center"
+                    Margin="0,24,0,0"
+                    Clicked="buttonRegister_Click"/>
+
+            <Label x:Name="textViewMessage"
+                   Text=""
+                   HorizontalOptions="Center"
+                   Margin="0,16,0,0"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

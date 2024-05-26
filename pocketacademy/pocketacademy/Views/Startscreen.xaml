@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="pocketacademy.Views.Startscreen">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout HorizontalOptions="Center"
+                         VerticalOptions="CenterAndExpand"
+                         Margin="20">
+
+                <Button x:Name="buttonLogin"
+                        WidthRequest="200"
+                        HeightRequest="50"
+                        Text="Login"
+                        Margin="10"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        Clicked="buttonLogin_Click"/>
+
+                <Button x:Name="buttonRegister"
+                        WidthRequest="200"
+                        HeightRequest="50"
+                        Text="Register"
+                        Margin="10"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        Clicked="buttonRegister_Click"/>
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
