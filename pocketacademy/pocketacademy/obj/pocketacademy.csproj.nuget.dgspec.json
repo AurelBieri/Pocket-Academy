@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Temp\\Pocket\\pocketacademy\\pocketacademy\\pocketacademy.csproj": {}
+    "C:\\Temp\\pocketit\\pocketacademy\\pocketacademy\\pocketacademy.csproj": {}
   },
   "projects": {
-    "C:\\Temp\\Pocket\\pocketacademy\\pocketacademy\\pocketacademy.csproj": {
+    "C:\\Temp\\pocketit\\pocketacademy\\pocketacademy\\pocketacademy.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Temp\\Pocket\\pocketacademy\\pocketacademy\\pocketacademy.csproj",
+        "projectUniqueName": "C:\\Temp\\pocketit\\pocketacademy\\pocketacademy\\pocketacademy.csproj",
         "projectName": "pocketacademy",
-        "projectPath": "C:\\Temp\\Pocket\\pocketacademy\\pocketacademy\\pocketacademy.csproj",
+        "projectPath": "C:\\Temp\\pocketit\\pocketacademy\\pocketacademy\\pocketacademy.csproj",
         "packagesPath": "C:\\Users\\xbloc\\.nuget\\packages\\",
-        "outputPath": "C:\\Temp\\Pocket\\pocketacademy\\pocketacademy\\obj\\",
+        "outputPath": "C:\\Temp\\pocketit\\pocketacademy\\pocketacademy\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -45,6 +45,10 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "dependencies": {
+            "FirebaseDatabase.net": {
+              "target": "Package",
+              "version": "[4.2.0, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
