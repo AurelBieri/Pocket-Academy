@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0CsgqS9E5KhDf4MviLag7HzhtG8eupRYVd0Ypy3vnWEDafVpMXKWENL6sQ1IVwaQwpztHuINWfbWdlZ5V7/IBg==",
+  "dgSpecHash": "a85s/10zxb7wLbo9jGg3RHKPDVcHm/D6ayKMSp1b3xilOq7cFETE/R9z/RKsfYqUiq9wOwYjEyrNsqSZG5KH8w==",
   "success": true,
-  "projectFilePath": "C:\\Temp\\pocketit\\pocketacademy\\pocketacademy.Android\\pocketacademy.Android.csproj",
+  "projectFilePath": "C:\\Temp\\AcademyPcket\\pocketacademy\\pocketacademy.Android\\pocketacademy.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\xbloc\\.nuget\\packages\\firebasedatabase.net\\4.2.0\\firebasedatabase.net.4.2.0.nupkg.sha512",
     "C:\\Users\\xbloc\\.nuget\\packages\\litedb\\4.1.4\\litedb.4.1.4.nupkg.sha512",
@@ -67,6 +67,7 @@
     "C:\\Users\\xbloc\\.nuget\\packages\\xamarin.androidx.viewpager2\\1.0.0.10\\xamarin.androidx.viewpager2.1.0.0.10.nupkg.sha512",
     "C:\\Users\\xbloc\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
     "C:\\Users\\xbloc\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512",
+    "C:\\Users\\xbloc\\.nuget\\packages\\xamarin.forms.visual.material\\5.0.0.2662\\xamarin.forms.visual.material.5.0.0.2662.nupkg.sha512",
     "C:\\Users\\xbloc\\.nuget\\packages\\xamarin.google.android.material\\1.4.0.2\\xamarin.google.android.material.1.4.0.2.nupkg.sha512",
     "C:\\Users\\xbloc\\.nuget\\packages\\xamarin.google.guava.listenablefuture\\1.0.0.2\\xamarin.google.guava.listenablefuture.1.0.0.2.nupkg.sha512"
   ],

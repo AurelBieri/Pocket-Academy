@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FCiiW3Xi3iQqzJyvD9eXhHUl4WeqzFgistFndmL9JYL3h66t6VmJNdwN/pRx5PTG/LmpyF+htZE168dUF75s+Q==",
+  "dgSpecHash": "5M1ApUOFACleDo+47HMxKdcbZJvSSEtpo2WX1rHvp11FPZuX0XWDERqd910oAieHFJyuVaUQBv/n9Cef+Sv8FQ==",
   "success": true,
-  "projectFilePath": "C:\\Temp\\pocketit\\pocketacademy\\pocketacademy\\pocketacademy.csproj",
+  "projectFilePath": "C:\\Temp\\AcademyPcket\\pocketacademy\\pocketacademy\\pocketacademy.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\xbloc\\.nuget\\packages\\firebasedatabase.net\\4.2.0\\firebasedatabase.net.4.2.0.nupkg.sha512",
     "C:\\Users\\xbloc\\.nuget\\packages\\litedb\\4.1.4\\litedb.4.1.4.nupkg.sha512",

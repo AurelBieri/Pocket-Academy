@@ -39,5 +39,23 @@ namespace pocketacademy.Database
 
             return Users.Select(r => r.Object).ToList();
         }
+
+        public static async Task PostSubjects(Subjecte subject)
+        {
+            var databaseHelper = new Databasehelper();
+
+            var result = await databaseHelper._firebase
+                .Child("Subject")
+                .PostAsync(subject);
+        }
+
+        public static async Task<List<Subjecte>> GetAllSubject()
+        {
+            var databaseHelper = new Databasehelper();
+            var subjects = await databaseHelper._firebase
+                .Child("Subject")
+                .OnceAsync<Subjecte>();
+            return subjects.Select(r => r.Object).ToList();
+        }
     }
 }

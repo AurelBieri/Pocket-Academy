@@ -31,7 +31,7 @@ namespace pocketacademy.Views
             if (matchingUser != null)
             {
                 textViewMessage.Text = "Login successful!";
-                // go to the main site
+                await Navigation.PushAsync(new Mainpage());
             }
             else
             {
