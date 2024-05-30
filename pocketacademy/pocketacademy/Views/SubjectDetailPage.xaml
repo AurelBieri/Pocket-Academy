@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="pocketacademy.Views.SubjectDetailPage">
+    <StackLayout Padding="10">
+        <!-- Label für den Namen des Fachs -->
+        <Label x:Name="subjectNameLabel" FontSize="Large" />
+
+        <!-- Bild des Fachs -->
+        <Image x:Name="subjectImage" HeightRequest="200" />
+
+        <!-- Liste der Dateien -->
+        <StackLayout x:Name="fileList" />
+
+        <!-- Abschnitt für Datei-Uploads -->
+        <Button Text="Choose File" Clicked="OnChooseFileClicked" Margin="0,20,0,0" />
+        <ListView x:Name="fileListView" />
+
+        <Button Text="Upload Files" Clicked="OnUploadFilesClicked" Margin="0,20,0,0" />
+    </StackLayout>
+</ContentPage>

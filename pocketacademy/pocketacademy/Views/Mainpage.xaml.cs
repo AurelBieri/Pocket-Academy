@@ -101,13 +101,13 @@ namespace pocketacademy.Views
 
         private async void OnSubjectClicked(object sender, EventArgs e)
         {
-           /* var button = sender as Button;
-            var subject = button?.CommandParameter as Subject;
+            var button = sender as Button;
+            var subject = button?.CommandParameter as Subjecte;
             if (subject != null)
             {
                 // Navigate to the subject page
-                await Navigation.PushAsync(new SubjectPage(subject));
-            } */
+                await Navigation.PushAsync(new SubjectDetailPage(subject));
+            }
         }
 
         public async void OnHomeClicked(object sender, EventArgs e)

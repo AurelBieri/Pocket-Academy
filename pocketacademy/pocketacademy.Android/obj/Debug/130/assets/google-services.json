@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "383056562589",
+    "firebase_url": "https://pocket-academy-database-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "pocket-academy-database",
+    "storage_bucket": "pocket-academy-database.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:383056562589:android:30a9380f98d6c8dc3d8774",
+        "android_client_info": {
+          "package_name": "Pocket.Academy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9OkU9G9LTSeI-bVg8vqvyd-GJZhOzTt4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

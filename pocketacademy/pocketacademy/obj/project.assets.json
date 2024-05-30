@@ -1388,11 +1388,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Temp\\AcademyPcket\\pocketacademy\\pocketacademy\\pocketacademy.csproj",
+      "projectUniqueName": "C:\\Temp\\thisworkpocket\\pocketacademy\\pocketacademy\\pocketacademy.csproj",
       "projectName": "pocketacademy",
-      "projectPath": "C:\\Temp\\AcademyPcket\\pocketacademy\\pocketacademy\\pocketacademy.csproj",
+      "projectPath": "C:\\Temp\\thisworkpocket\\pocketacademy\\pocketacademy\\pocketacademy.csproj",
       "packagesPath": "C:\\Users\\xbloc\\.nuget\\packages\\",
-      "outputPath": "C:\\Temp\\AcademyPcket\\pocketacademy\\pocketacademy\\obj\\",
+      "outputPath": "C:\\Temp\\thisworkpocket\\pocketacademy\\pocketacademy\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
