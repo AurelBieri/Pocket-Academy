@@ -39,7 +39,7 @@ namespace pocketacademy.Droid
 
         public FirebaseService()
         {
-            _firebaseStorage = new FirebaseStorage("gs://pocket-academy-database.appspot.com");
+            _firebaseStorage = new FirebaseStorage("pocket-academy-database.appspot.com");
             _firebaseClient = new FirebaseClient("https://pocket-academy-database-default-rtdb.europe-west1.firebasedatabase.app/");
         }
 
@@ -58,7 +58,7 @@ namespace pocketacademy.Droid
                 .OnceAsync<FileMetadata>();
 
             return files.Select(item => $"{item.Object.FileName} ({item.Object.FileUrl})").ToList();
-        }
+        } 
 
         public async Task DownloadFileAsync(string path)
         {

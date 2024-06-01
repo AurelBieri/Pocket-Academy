@@ -25,8 +25,11 @@ namespace pocketacademy.Views
              /* List< Subjecte> sub = new List<Subjecte>
             {
                 new Subjecte { Name = "Math" },
-                new Subjecte { Name = "Science" },
-                new Subjecte { Name = "History" },
+                new Subjecte { Name = "Deutsch" },
+                new Subjecte { Name = "Englisch" },
+                new Subjecte { Name = "M426" },
+                new Subjecte { Name = "M165" },
+                new Subjecte { Name = "M322" }
             };
             foreach (Subjecte s in sub)
             {

@@ -10,6 +10,7 @@ using System.Reactive.Subjects;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Xamarin.Forms;
+using pocketacademy.Database;
 
 #if __ANDROID__
 using Firebase.Storage;
@@ -42,7 +43,7 @@ namespace pocketacademy.Views
                 var imageUrl = await _firebaseService.GetFileUrlAsync($"images/{_subject.Name.ToLower()}.jpg");
                 subjectImage.Source = ImageSource.FromUri(new Uri(imageUrl));
 
-                var files = await _firebaseService.GetFilesAsync($"files/{_subject.Name.ToLower()}/");
+                var files = await Databasehelper.GetFidlesAsync(_subject.Name.ToLower());
                 foreach (var file in files)
                 {
                     var button = new Button

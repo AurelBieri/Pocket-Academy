@@ -8,6 +8,7 @@ using Firebase.Database;
 using Firebase.Database.Query;
 using pocketacademy.Models;
 using System.Linq;
+using System.Reactive.Subjects;
 
 
 namespace pocketacademy.Database
@@ -56,6 +57,18 @@ namespace pocketacademy.Database
                 .Child("Subject")
                 .OnceAsync<Subjecte>();
             return subjects.Select(r => r.Object).ToList();
+        }
+
+        public static async Task<List<string>> GetFidlesAsync(string subjectName)
+        {
+            var databaseHelper = new Databasehelper();
+            var files = await databaseHelper._firebase
+                .Child("subjects")
+                .Child(subjectName.ToLower())
+                .Child("files")
+                .OnceAsync<FileMetadata>();
+
+            return files.Select(item => $"{item.Object.FileName} ({item.Object.FileUrl})").ToList();
         }
     }
 }
