@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="pocketacademy.Views.FileUploadPage">
+    <StackLayout Padding="10" VerticalOptions="FillAndExpand">
+        <!-- Grey box to display selected files -->
+        <Frame BackgroundColor="LightGray" Padding="10" CornerRadius="5" VerticalOptions="FillAndExpand">
+            <ListView x:Name="fileListView" />
+        </Frame>
+        <!-- Buttons at the bottom -->
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="0,20,0,0">
+            <Button Text="Choose Files" Clicked="OnChooseFileClicked" HorizontalOptions="CenterAndExpand" />
+            <Button Text="Upload Files" Clicked="OnUploadFilesClicked" HorizontalOptions="CenterAndExpand" Margin="20,0,0,0" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

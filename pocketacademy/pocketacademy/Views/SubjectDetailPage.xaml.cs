@@ -5,25 +5,17 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System.Net.Http;
-using System.Reactive.Subjects;
 using System.Threading.Tasks;
-using Xamarin.Essentials;
 using Xamarin.Forms;
 using pocketacademy.Database;
-
-#if __ANDROID__
-using Firebase.Storage;
-using Firebase.Database;
-using Firebase.Database.Query;
-#endif
+using System.Web;
+using System.Text.RegularExpressions;
 
 namespace pocketacademy.Views
 {
     public partial class SubjectDetailPage : ContentPage
     {
         private readonly Subjecte _subject;
-        private List<string> selectedFiles = new List<string>();
         private IFirebaseService _firebaseService;
 
         public SubjectDetailPage(Subjecte subject)
@@ -46,10 +38,12 @@ namespace pocketacademy.Views
                 var files = await Databasehelper.GetFidlesAsync(_subject.Name.ToLower());
                 foreach (var file in files)
                 {
+                    var match = Regex.Match(file, @"([^\/\\]+)\?");
+                    var fileName = match.Success ? match.Groups[1].Value : "Unknown";
                     var button = new Button
                     {
-                        Text = file,
-                        Command = new Command(async () => await _firebaseService.DownloadFileAsync($"files/{_subject.Name.ToLower()}/{file}"))
+                        Text = fileName,
+                        Command = new Command(async () => await _firebaseService.DownloadFileAsync($"files/{_subject.Name.ToLower()}/{fileName}"))
                     };
                     fileList.Children.Add(button);
                 }
@@ -57,49 +51,15 @@ namespace pocketacademy.Views
             catch (Exception ex)
             {
                 Debug.WriteLine($"Error loading details: {ex.Message}");
-                // Optionally show an alert or some UI indication of the error
             }
+
+
         }
 
-        private async void OnChooseFileClicked(object sender, EventArgs e)
+        private async void OnOpenFileUploadPageClicked(object sender, EventArgs e)
         {
-            try
-            {
-                var customFileType = new FilePickerFileType(
-                    new Dictionary<DevicePlatform, IEnumerable<string>>
-                    {
-                    { DevicePlatform.Android, new[] { "*/*" } },
-                    { DevicePlatform.UWP, new[] { "." } }
-                    });
-
-                var result = await FilePicker.PickMultipleAsync(new PickOptions
-                {
-                    FileTypes = customFileType,
-                    PickerTitle = "Select files to upload"
-                });
-
-                if (result != null)
-                {
-                    selectedFiles = result.Select(file => file.FullPath).ToList();
-                    fileListView.ItemsSource = selectedFiles;
-                }
-            }
-            catch (Exception ex)
-            {
-                await DisplayAlert("Error", ex.Message, "OK");
-            }
-        }
-
-        private async void OnUploadFilesClicked(object sender, EventArgs e)
-        {
-            if (_subject == null)
-            {
-                await DisplayAlert("Error", "No subject selected", "OK");
-                return;
-            }
-
-            await _firebaseService.UploadFileAsync(_subject.Name, selectedFiles);
-            await DisplayAlert("Success", "Files uploaded successfully", "OK");
+            var fileUploadPage = new FileUploadPage(_subject.Name);
+            await Navigation.PushAsync(fileUploadPage);
         }
     }
 }

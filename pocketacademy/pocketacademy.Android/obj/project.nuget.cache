@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Ubyf2Os0Av7g+JHSH4Tsm53ED3AB1XkDK6V+VQH7xdHFna35LF1j2TCMCS1noT/C7VgI7Ce1V6rN8kHh+VHG/g==",
+  "dgSpecHash": "vZoc+xhEcKoy2+bfCSkuogLW4mWdXHc7u3g89oToMXcqKALxQruTtCVvTZMz+SymJlLWmkYvB+GPf0h9bVCeWw==",
   "success": true,
-  "projectFilePath": "C:\\Temp\\pocketlernen\\pocketacademy\\pocketacademy.Android\\pocketacademy.Android.csproj",
+  "projectFilePath": "C:\\Temp\\pocketitkacademy\\pocketacademy\\pocketacademy.Android\\pocketacademy.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\xbloc\\.nuget\\packages\\firebasedatabase.net\\4.2.0\\firebasedatabase.net.4.2.0.nupkg.sha512",
     "C:\\Users\\xbloc\\.nuget\\packages\\firebasestorage.net\\1.0.3\\firebasestorage.net.1.0.3.nupkg.sha512",

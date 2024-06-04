@@ -19,7 +19,7 @@ namespace pocketacademy.Views
             InitializeComponent();
         }
 
-        private void buttonRegister_Click(object sender, EventArgs e)
+        private async void buttonRegister_Click(object sender, EventArgs e)
         {
             string username = editTextUsername.Text;
             string password = editTextPassword.Text;
@@ -50,6 +50,8 @@ namespace pocketacademy.Views
             Databasehelper.PostUserInfo(user);
 
             textViewMessage.Text = "Registration successful!";
+
+            await Navigation.PushAsync(new Login());
         }
     }
 }

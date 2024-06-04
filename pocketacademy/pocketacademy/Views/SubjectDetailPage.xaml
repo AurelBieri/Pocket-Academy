@@ -2,20 +2,26 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="pocketacademy.Views.SubjectDetailPage">
-    <StackLayout Padding="10">
-        <!-- Label für den Namen des Fachs -->
-        <Label x:Name="subjectNameLabel" FontSize="Large" />
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
 
-        <!-- Bild des Fachs -->
-        <Image x:Name="subjectImage" HeightRequest="200" />
+        <ScrollView Grid.Row="0" Padding="10">
+            <StackLayout>
+                <!-- Label für den Namen des Fachs -->
+                <Label x:Name="subjectNameLabel" FontSize="Large" />
 
-        <!-- Liste der Dateien -->
-        <StackLayout x:Name="fileList" />
+                <!-- Bild des Fachs -->
+                <Image x:Name="subjectImage" HeightRequest="200" />
 
-        <!-- Abschnitt für Datei-Uploads -->
-        <Button Text="Choose File" Clicked="OnChooseFileClicked" Margin="0,20,0,0" />
-        <ListView x:Name="fileListView" />
+                <!-- Liste der Dateien -->
+                <StackLayout x:Name="fileList" />
+            </StackLayout>
+        </ScrollView>
 
-        <Button Text="Upload Files" Clicked="OnUploadFilesClicked" Margin="0,20,0,0" />
-    </StackLayout>
+        <!-- Button to open the file selection and upload page -->
+        <Button Grid.Row="1" Text="Choose and Upload Files" Clicked="OnOpenFileUploadPageClicked" Margin="10" />
+    </Grid>
 </ContentPage>
