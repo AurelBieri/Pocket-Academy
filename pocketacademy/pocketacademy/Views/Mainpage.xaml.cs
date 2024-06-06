@@ -1,15 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reactive.Subjects;
-using System.Text;
 using System.Threading.Tasks;
 using pocketacademy.Models;
 using pocketacademy.Database;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using System.Collections.Generic;
-
 
 namespace pocketacademy.Views
 {
@@ -22,17 +18,6 @@ namespace pocketacademy.Views
         public Mainpage()
         {
             InitializeComponent();
-             /* List< Subjecte> sub = new List<Subjecte>
-            {
-                new Subjecte { Name = "Math" },
-                new Subjecte { Name = "Science" },
-                new Subjecte { Name = "History" },
-            };
-            foreach (Subjecte s in sub)
-            {
-                Databasehelper.PostSubjects(s);
-            } */
-
             InitializeDataAsync();
         }
 
@@ -105,7 +90,6 @@ namespace pocketacademy.Views
             var subject = button?.CommandParameter as Subjecte;
             if (subject != null)
             {
-                // Navigate to the subject page
                 await Navigation.PushAsync(new SubjectDetailPage(subject));
             }
         }
@@ -117,7 +101,7 @@ namespace pocketacademy.Views
 
         public async void OnAccountSettingsClicked(object sender, EventArgs e)
         {
-           // await Navigation.PushAsync(new AccountSettingsPage());
+            await Navigation.PushAsync(new AccountSettingsPage());
         }
     }
 }

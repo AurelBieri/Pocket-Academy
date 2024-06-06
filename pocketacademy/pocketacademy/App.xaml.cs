@@ -28,5 +28,13 @@ namespace pocketacademy
         protected override void OnResume()
         {
         }
+
+            public void Logout()
+            {
+                // Logik zum Abmelden und Zurücksetzen des Hauptseiteninhalts
+                MainPage = new NavigationPage(new Views.Login());
+            }
+        
     }
+
 }

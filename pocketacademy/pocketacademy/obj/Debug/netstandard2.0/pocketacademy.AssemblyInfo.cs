@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("pocketacademy")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bdc26634e7fab5f087a4f791f7a36b1a52b49777")]
 [assembly: System.Reflection.AssemblyProductAttribute("pocketacademy")]
 [assembly: System.Reflection.AssemblyTitleAttribute("pocketacademy")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="pocketacademy.Views.AccountSettingsPage">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical"
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="CenterAndExpand"
+                     Padding="16">
+            <Label Text="Account Information" FontSize="Large" HorizontalOptions="Center" />
+
+            <Label Text="Username:" />
+            <Label x:Name="labelUsername" FontAttributes="Bold" />
+
+            <Label Text="Email:" />
+            <Label x:Name="labelEmail" FontAttributes="Bold" />
+
+            <Button Text="Logout" Clicked="OnLogoutClicked" HorizontalOptions="Center" Margin="0,24,0,0"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

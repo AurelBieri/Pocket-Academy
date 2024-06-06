@@ -1382,23 +1382,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\xbloc\\.nuget\\packages\\": {},
+    "C:\\Users\\laura\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Temp\\thisworkpocket\\pocketacademy\\pocketacademy\\pocketacademy.csproj",
+      "projectUniqueName": "C:\\Users\\laura\\OneDrive - sluz\\Dokumente\\BBZW Sursee\\M306\\Projekt\\pocketacademy\\pocketacademy\\pocketacademy.csproj",
       "projectName": "pocketacademy",
-      "projectPath": "C:\\Temp\\thisworkpocket\\pocketacademy\\pocketacademy\\pocketacademy.csproj",
-      "packagesPath": "C:\\Users\\xbloc\\.nuget\\packages\\",
-      "outputPath": "C:\\Temp\\thisworkpocket\\pocketacademy\\pocketacademy\\obj\\",
+      "projectPath": "C:\\Users\\laura\\OneDrive - sluz\\Dokumente\\BBZW Sursee\\M306\\Projekt\\pocketacademy\\pocketacademy\\pocketacademy.csproj",
+      "packagesPath": "C:\\Users\\laura\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\laura\\OneDrive - sluz\\Dokumente\\BBZW Sursee\\M306\\Projekt\\pocketacademy\\pocketacademy\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\xbloc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\laura\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -1420,6 +1420,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -1456,7 +1461,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
       }
     }
   }
