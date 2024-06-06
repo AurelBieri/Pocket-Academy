@@ -22,19 +22,16 @@ namespace pocketacademy.Views
         public Mainpage()
         {
             InitializeComponent();
-             /* List< Subjecte> sub = new List<Subjecte>
+             List< Subjecte> sub = new List<Subjecte>
             {
-                new Subjecte { Name = "Math" },
-                new Subjecte { Name = "Deutsch" },
-                new Subjecte { Name = "Englisch" },
-                new Subjecte { Name = "M426" },
-                new Subjecte { Name = "M165" },
-                new Subjecte { Name = "M322" }
+                new Subjecte { Name = "M306" },
+                new Subjecte { Name = "Wirtschaft" },
+                new Subjecte { Name = "FRW" }
             };
             foreach (Subjecte s in sub)
             {
                 Databasehelper.PostSubjects(s);
-            } */
+            } 
 
             InitializeDataAsync();
         }
@@ -108,19 +105,17 @@ namespace pocketacademy.Views
             var subject = button?.CommandParameter as Subjecte;
             if (subject != null)
             {
-                // Navigate to the subject page
                 await Navigation.PushAsync(new SubjectDetailPage(subject));
             }
         }
 
         public async void OnHomeClicked(object sender, EventArgs e)
         {
-            await DisplayAlert("Home", "Home button clicked", "OK");
+            
         }
 
         public async void OnAccountSettingsClicked(object sender, EventArgs e)
         {
-           // await Navigation.PushAsync(new AccountSettingsPage());
         }
     }
 }

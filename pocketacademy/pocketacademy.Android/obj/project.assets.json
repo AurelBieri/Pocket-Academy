@@ -7740,11 +7740,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Temp\\pocketitkacademy\\pocketacademy\\pocketacademy.Android\\pocketacademy.Android.csproj",
+      "projectUniqueName": "C:\\Temp\\finalpockeacademy\\pocketacademy\\pocketacademy.Android\\pocketacademy.Android.csproj",
       "projectName": "pocketacademy.Android",
-      "projectPath": "C:\\Temp\\pocketitkacademy\\pocketacademy\\pocketacademy.Android\\pocketacademy.Android.csproj",
+      "projectPath": "C:\\Temp\\finalpockeacademy\\pocketacademy\\pocketacademy.Android\\pocketacademy.Android.csproj",
       "packagesPath": "C:\\Users\\xbloc\\.nuget\\packages\\",
-      "outputPath": "C:\\Temp\\pocketitkacademy\\pocketacademy\\pocketacademy.Android\\obj\\",
+      "outputPath": "C:\\Temp\\finalpockeacademy\\pocketacademy\\pocketacademy.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -7765,8 +7765,8 @@
       "frameworks": {
         "monoandroid13.0": {
           "projectReferences": {
-            "C:\\Temp\\pocketitkacademy\\pocketacademy\\pocketacademy\\pocketacademy.csproj": {
-              "projectPath": "C:\\Temp\\pocketitkacademy\\pocketacademy\\pocketacademy\\pocketacademy.csproj"
+            "C:\\Temp\\finalpockeacademy\\pocketacademy\\pocketacademy\\pocketacademy.csproj": {
+              "projectPath": "C:\\Temp\\finalpockeacademy\\pocketacademy\\pocketacademy\\pocketacademy.csproj"
             }
           }
         }

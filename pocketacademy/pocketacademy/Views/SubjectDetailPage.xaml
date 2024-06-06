@@ -14,7 +14,13 @@
                 <Label x:Name="subjectNameLabel" FontSize="Large" />
 
                 <!-- Bild des Fachs -->
-                <Image x:Name="subjectImage" HeightRequest="200" />
+                <Image x:Name="subjectImage" HeightRequest="200" IsVisible="False" />
+
+                <!-- Label für den Fall, dass kein Bild verfügbar ist -->
+                <Label x:Name="noImageLabel" Text="No Summary available for this subject" IsVisible="False" TextColor="Red" HorizontalOptions="Center" VerticalOptions="Center" />
+
+                <!-- Überschrift für die Dateienliste -->
+                <Label Text="Lernmaterialien" FontSize="Medium" FontAttributes="Bold" Margin="10,20,10,0" />
 
                 <!-- Liste der Dateien -->
                 <StackLayout x:Name="fileList" />

@@ -49,7 +49,7 @@ namespace pocketacademy.Droid
             return await storageReference.GetDownloadUrlAsync();
         }
 
-        public async Task<List<string>> GetFilesAsync(string subjectName)
+        public async Task<List<FileMetadata>> GetFilesAsync(string subjectName)
         {
             var files = await _firebaseClient
                 .Child("subjects")
@@ -57,25 +57,37 @@ namespace pocketacademy.Droid
                 .Child("files")
                 .OnceAsync<FileMetadata>();
 
-            return files.Select(item => $"{item.Object.FileName} ({item.Object.FileUrl})").ToList();
-        } 
-
-        public async Task DownloadFileAsync(string path)
-        {
-            var fileUrl = await GetFileUrlAsync(path);
-            using (var client = new HttpClient())
+            return files.Select(item => new FileMetadata
             {
-                var fileBytes = await client.GetByteArrayAsync(fileUrl);
-                var filePath = Path.Combine(FileSystem.CacheDirectory, Path.GetFileName(new Uri(fileUrl).LocalPath));
-                File.WriteAllBytes(filePath, fileBytes);
-                await Launcher.OpenAsync(new OpenFileRequest
-                {
-                    File = new ReadOnlyFile(filePath)
-                });
-            }
+                FileName = item.Object.FileName,
+                FileUrl = item.Object.FileUrl
+            }).ToList();
         }
 
-        public async Task UploadFileAsync(string subjectName, List<string> files)
+        public async Task DownloadFileAsync(string fileUrl)
+        {
+            try
+            {
+                using (var client = new HttpClient())
+                {
+                    var fileBytes = await client.GetByteArrayAsync(fileUrl);
+                    var fileName = Path.GetFileName(new Uri(fileUrl).LocalPath);
+                    var filePath = Path.Combine(FileSystem.CacheDirectory, fileName);
+                    File.WriteAllBytes(filePath, fileBytes);
+                    await Launcher.OpenAsync(new OpenFileRequest
+                    {
+                        File = new ReadOnlyFile(filePath)
+                    });
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+    
+
+    public async Task UploadFileAsync(string subjectName, List<string> files)
         {
             foreach (var file in files)
             {

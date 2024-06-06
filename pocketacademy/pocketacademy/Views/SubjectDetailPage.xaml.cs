@@ -32,18 +32,27 @@ namespace pocketacademy.Views
         {
             try
             {
-                var imageUrl = await _firebaseService.GetFileUrlAsync($"images/{_subject.Name.ToLower()}.jpg");
-                subjectImage.Source = ImageSource.FromUri(new Uri(imageUrl));
-
-                var files = await Databasehelper.GetFidlesAsync(_subject.Name.ToLower());
-                foreach (var file in files)
+                try
                 {
-                    var match = Regex.Match(file, @"([^\/\\]+)\?");
-                    var fileName = match.Success ? match.Groups[1].Value : "Unknown";
+                    var imageUrl = await _firebaseService.GetFileUrlAsync($"images/{_subject.Name.ToLower()}.jpg");
+                    subjectImage.Source = ImageSource.FromUri(new Uri(imageUrl));
+                    subjectImage.IsVisible = true;
+                    noImageLabel.IsVisible = false;
+                }
+                catch (Exception imageEx)
+                {
+                    Debug.WriteLine($"Image not found for subject {_subject.Name}: {imageEx.Message}");
+                    subjectImage.IsVisible = false;
+                    noImageLabel.IsVisible = true;
+                }
+
+                var files = await _firebaseService.GetFilesAsync(_subject.Name.ToLower());
+                foreach (var fileMetadata in files)
+                {
                     var button = new Button
                     {
-                        Text = fileName,
-                        Command = new Command(async () => await _firebaseService.DownloadFileAsync($"files/{_subject.Name.ToLower()}/{fileName}"))
+                        Text = fileMetadata.FileName,
+                        Command = new Command(async () => await _firebaseService.DownloadFileAsync(fileMetadata.FileUrl))
                     };
                     fileList.Children.Add(button);
                 }
@@ -52,9 +61,9 @@ namespace pocketacademy.Views
             {
                 Debug.WriteLine($"Error loading details: {ex.Message}");
             }
-
-
         }
+
+
 
         private async void OnOpenFileUploadPageClicked(object sender, EventArgs e)
         {
