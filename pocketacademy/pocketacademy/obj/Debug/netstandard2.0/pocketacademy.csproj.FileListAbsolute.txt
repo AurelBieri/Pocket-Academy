@@ -135,3 +135,4 @@ C:\Temp\finalpockeacademy\pocketacademy\pocketacademy\obj\Debug\netstandard2.0\X
 C:\Temp\finalpockeacademy\pocketacademy\pocketacademy\obj\Debug\netstandard2.0\pocketacademy.dll
 C:\Temp\finalpockeacademy\pocketacademy\pocketacademy\obj\Debug\netstandard2.0\refint\pocketacademy.dll
 C:\Temp\finalpockeacademy\pocketacademy\pocketacademy\obj\Debug\netstandard2.0\pocketacademy.pdb
+C:\Temp\finalpockeacademy\pocketacademy\pocketacademy\obj\Debug\netstandard2.0\Views\AccountSettingsPage.xaml.g.cs

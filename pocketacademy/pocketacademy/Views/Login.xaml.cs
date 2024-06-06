@@ -31,6 +31,9 @@ namespace pocketacademy.Views
             if (matchingUser != null)
             {
                 textViewMessage.Text = "Login successful!";
+                Application.Current.Properties["Username"] = matchingUser.Username;
+                Application.Current.Properties["Email"] = matchingUser.Email;
+                await Application.Current.SavePropertiesAsync();
                 await Navigation.PushAsync(new Mainpage());
             }
             else

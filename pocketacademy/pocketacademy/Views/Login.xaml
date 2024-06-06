@@ -7,6 +7,11 @@
                      HorizontalOptions="FillAndExpand"
                      VerticalOptions="CenterAndExpand"
                      Padding="16">
+            
+            <Label Text="Login"
+                   FontSize="24"
+                   HorizontalOptions="Center"
+                   Margin="0,0,0,24" />
 
             <Entry x:Name="editTextUsername"
                    Placeholder="Username"

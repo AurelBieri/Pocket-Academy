@@ -22,7 +22,7 @@ namespace pocketacademy.Views
         public Mainpage()
         {
             InitializeComponent();
-             List< Subjecte> sub = new List<Subjecte>
+            /* List< Subjecte> sub = new List<Subjecte>
             {
                 new Subjecte { Name = "M306" },
                 new Subjecte { Name = "Wirtschaft" },
@@ -31,7 +31,7 @@ namespace pocketacademy.Views
             foreach (Subjecte s in sub)
             {
                 Databasehelper.PostSubjects(s);
-            } 
+            } */
 
             InitializeDataAsync();
         }
@@ -116,6 +116,7 @@ namespace pocketacademy.Views
 
         public async void OnAccountSettingsClicked(object sender, EventArgs e)
         {
+            await Navigation.PushAsync(new AccountSettingsPage());
         }
     }
 }
