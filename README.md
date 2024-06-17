@@ -1,0 +1,3 @@
+Es ist wichtig anzumerken, dass es für ein Projekt Planungsmodul erstellt worden ist und deswegen mehr als Prototyp funktioniert, der noch nicht alle Sicherheitsmassnahmen erfüllt.
+
+Dieses Projekt wurde für das Modul M322 gemacht, welches ein Projekt Planungs Modul ist. Wir machten eine Mobile App für Schlüre auf der sie Dateien für Module über eine Firebase Realtime Datenbank Teilen können. Es ist unsere erste Android Anwendung. Man kann sich in der App Registrieren oder Anmelden und kann dann bei Modulen Dateien wie Pdf oder PowerPoints hochladen. Sie können diese auch öffnen und betrachten. Das Projekt habe ich 2 zweit gemacht.
